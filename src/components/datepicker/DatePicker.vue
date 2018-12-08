@@ -35,10 +35,11 @@
       :icon-control-right="iconControlRight"
       @year-change="onYearChange"
       @view-change="onViewChange"/>
-    <slot name="custom-chikyu"></slot>  
+    <slot name="custom-chikyu"></slot>
     <div v-if="todayBtn||clearBtn">
       <br/>
       <div class="text-center">
+        <slot name="custom-chikyu-button"></slot>
         <btn
           data-action="select"
           type="info"
