@@ -36,7 +36,7 @@
       @year-change="onYearChange"
       @view-change="onViewChange"/>
     <slot name="custom-chikyu"></slot>
-    <div v-if="todayBtn||clearBtn">
+    <div v-if="todayBtn||clearBtn||customChikyuBtn">
       <br/>
       <div class="text-center">
         <slot name="custom-chikyu-button"></slot>
@@ -85,6 +85,10 @@
       clearBtn: {
         type: Boolean,
         default: true
+      },
+      customChikyuBtn: {
+        type: Boolean,
+        default: false
       },
       closeOnSelected: {
         type: Boolean,
